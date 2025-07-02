@@ -49,48 +49,6 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 800) navLinks.classList.remove('open');
 });
 
-// === Login/Logout Modal & State ===
-const loginBtn = document.getElementById('login-btn');
-const logoutBtn = document.getElementById('logout-btn');
-const loginModal = document.getElementById('login-modal');
-const closeLogin = document.getElementById('close-login');
-const loginForm = document.getElementById('login-form');
-const loginError = document.getElementById('login-error');
-function setLoggedIn(username) {
-    localStorage.setItem('loggedIn', 'true');
-    localStorage.setItem('username', username);
-    loginBtn.style.display = 'none';
-    logoutBtn.style.display = 'inline-block';
-    loginModal.style.display = 'none';
-}
-function setLoggedOut() {
-    localStorage.setItem('loggedIn', 'false');
-    localStorage.removeItem('username');
-    loginBtn.style.display = 'inline-block';
-    logoutBtn.style.display = 'none';
-}
-if (localStorage.getItem('loggedIn') === 'true') setLoggedIn(localStorage.getItem('username'));
-else setLoggedOut();
-loginBtn.addEventListener('click', () => {
-    loginModal.style.display = 'flex';
-    loginError.textContent = '';
-});
-closeLogin.addEventListener('click', () => loginModal.style.display = 'none');
-window.addEventListener('click', (e) => {
-    if (e.target === loginModal) loginModal.style.display = 'none';
-});
-loginForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const username = document.getElementById('login-username').value.trim();
-    const password = document.getElementById('login-password').value;
-    if (username === 'user' && password === 'pass') {
-        setLoggedIn(username);
-    } else {
-        loginError.textContent = 'Invalid username or password (try user/pass)';
-    }
-});
-logoutBtn.addEventListener('click', setLoggedOut);
-
 // === Contact Form Validation & Persistence ===
 const contactForm = document.getElementById('contact-form');
 const nameInput = document.getElementById('name');
