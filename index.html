@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>My Sample Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='0.9em' font-size='90'%3E%F0%9F%91%A8%F0%9F%8F%BB%E2%80%8D%F0%9F%92%BB%3C/text%3E%3C/svg%3E">
     <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome CDN for icons -->
+    <!-- Font Awesome CDN icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <script src="script.js"></script>
     <header>
         <h1>Welcome to Panduka's Portfolio</h1>
         <nav>
@@ -25,23 +27,23 @@
                 <i class="fa-solid fa-palette"></i>
             </label>
             <input type="color" id="accent-color-picker" style="display:none;">
-            <button id="login-btn" class="icon-btn" aria-label="Login"><i class="fa-solid fa-user"></i></button>
-            <button id="logout-btn" class="icon-btn" aria-label="Logout" style="display:none;"><i class="fa-solid fa-right-from-bracket"></i></button>
+           
         </nav>
     </header>
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>Hello! I'm Panduka Wijesinghe, a passionate web developer. Welcome to my personal website.</p>
+            <p>Hello! I'm Panduka Wijesinghe, a passionate web developer. Welcome to my Sample personal website.</p>
         </section>
         <section id="gallery">
             <h2>Gallery</h2>
             <div class="gallery">
+                <img src="./Images/Panduka.jpg" alt="Panduka" class="animated-img">
                 <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature 1" class="animated-img">
                 <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nature 2" class="animated-img">
                 <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Nature 3" class="animated-img">
                 <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Nature 4" class="animated-img">
-                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" alt="Nature 5" class="animated-img">
+                
             </div>
         </section>
         <section id="skills">
@@ -108,155 +110,7 @@
             <p id="message"></p>
             <p id="message2"></p>
         </section>
-        <div id="login-modal" class<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome CDN for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-</head>
-<body>
-    <header>
-        <h1>Welcome to Panduka's Portfolio</h1>
-        <nav>
-            <button id="nav-toggle" class="hamburger" aria-label="Toggle navigation">&#9776;</button>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="https://github.com/pandukawijesinghee" target="_blank">GitHub</a></li>
-            </ul>
-            <button id="theme-toggle" aria-label="Toggle dark/light mode" class="icon-btn"><i class="fa-solid fa-moon"></i></button>
-            <label for="accent-color-picker" class="icon-btn" title="Pick accent color" aria-label="Pick accent color" style="margin-left:10px;">
-                <i class="fa-solid fa-palette"></i>
-            </label>
-            <input type="color" id="accent-color-picker" style="display:none;">
-            <button id="login-btn" class="icon-btn" aria-label="Login"><i class="fa-solid fa-user"></i></button>
-            <button id="logout-btn" class="icon-btn" aria-label="Logout" style="display:none;"><i class="fa-solid fa-right-from-bracket"></i></button>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Hello! I'm Panduka Wijesinghe, a passionate web developer. Welcome to my Sample personal website.</p>
-        </section>
-        <section id="gallery">
-            <h2>Gallery</h2>
-            <div class="gallery">
-                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Nature 1" class="animated-img">
-                <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Nature 2" class="animated-img">
-                <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80" alt="Nature 3" class="animated-img">
-                <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Nature 4" class="animated-img">
-                <img src="https://images.unsplash.com/photo-1465101178521-c1a9136a3b99?auto=format&fit=crop&w=400&q=80" alt="Nature 5" class="animated-img">
-            </div>
-        </section>
-        <section id="skills">
-            <h2>My Skills</h2>
-            <ul>
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>UI/UX Design</li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Projects Table</h2>
-            <input type="text" id="project-search" placeholder="Search projects..." style="margin-bottom:10px;">
-            <select id="sort-select">
-                <option value="">Sort By</option>
-                <option value="year">Year</option>
-                <option value="status">Status</option>
-            </select>
-            <button id="export-btn">Export CSV</button>
-            <table id="projects-table">
-                <thead>
-                    <tr>
-                        <th>Project</th>
-                        <th>Year</th>
-                        <th>Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Portfolio Website</td>
-                        <td>2025</td>
-                        <td>Completed</td>
-                    </tr>
-                    <tr>
-                        <td>Online Voting System for Reality Shows </td>
-                        <td>2023</td>
-                        <td>Completed</td>
-                    </tr>
-                    <tr>
-                        <td>World-Explorer</td>
-                        <td>2025</td>
-                        <td>Completed</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form id="contact-form" novalidate>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <span class="error" id="name-error"></span>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <span class="error" id="email-error"></span>
-                <label for="message">Message:</label>
-                <textarea id="message-input" name="message" required></textarea>
-                <span class="error" id="message-error"></span>
-                <button type="submit" class="animated-btn">Send</button>
-            </form>
-            <button onclick="showMessage()" class="animated-btn">Show Contact Info</button>
-            <p id="message"></p>
-            <p id="message2"></p>
-        </section>
-        <div id="login-modal" class="modal" style="display:none;">
-            <div class="modal-content">
-                <span class="close" id="close-login">&times;</span>
-                <h2>Login</h2>
-                <form id="login-form">
-                    <label for="login-username">Username:</label>
-                    <input type="text" id="login-username" required>
-                    <label for="login-password">Password:</label>
-                    <input type="password" id="login-password" required>
-                    <button type="submit">Login</button>
-                </form>
-                <span class="error" id="login-error"></span>
-            </div>
-        </div>
     </main>
-    <footer>
-        <p>&copy; 2024 Panduka Wijesinghe | <a href="pandukawijesinghe@email.com">Email Me</a> | <a href="www.linkedin.com/in/panduka-wijesinghe-b928552b7" target="_blank">LinkedIn</a></p>
-    </footer>
-    <script src="script.js"></script>
 </body>
 </html>
-="modal" style="display:none;">
-            <div class="modal-content">
-                <span class="close" id="close-login">&times;</span>
-                <h2>Login</h2>
-                <form id="login-form">
-                    <label for="login-username">Username:</label>
-                    <input type="text" id="login-username" required>
-                    <label for="login-password">Password:</label>
-                    <input type="password" id="login-password" required>
-                    <button type="submit">Login</button>
-                </form>
-                <span class="error" id="login-error"></span>
-            </div>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 Panduka Wijesinghe | <a href="pandukawijesinghe@email.com">Email Me</a> | <a href="www.linkedin.com/in/panduka-wijesinghe-b928552b7" target="_blank">LinkedIn</a></p>
-    </footer>
-    <script src="script.js"></script>
-</body>
-</html>
+   
