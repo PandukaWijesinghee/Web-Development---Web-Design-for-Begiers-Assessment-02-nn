@@ -1,4 +1,4 @@
-# Assessment 02
+# Assessment 02 Web Design for Beginners
 
 This is a simple web application for Assessment 02, developed as part of the DP Education program. The project demonstrates basic web development skills using HTML, CSS, and JavaScript.
 
@@ -50,4 +50,4 @@ Panduka Wijesinghe
 
 ## License
 
-This project is for educational purposes only. 
+This project is for educational purposes only.
