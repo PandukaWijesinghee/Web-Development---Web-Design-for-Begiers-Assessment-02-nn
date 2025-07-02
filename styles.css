@@ -1,0 +1,362 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f4f4;
+    color: #222;
+}
+header {
+    background: #222;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+.nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.nav-links a:hover {
+    color: #ff9800;
+}
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+section {
+    margin-bottom: 2.5rem;
+}
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+.gallery img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    transition: transform 0.3s;
+}
+.gallery img:hover {
+    transform: scale(1.08);
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+}
+th {
+    background: #ff9800;
+    color: #fff;
+}
+tr:nth-child(even) {
+    background: #f9f9f9;
+}
+ul {
+    padding-left: 1.5rem;
+}
+.animated-btn {
+    background: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: background 0.3s, transform 0.2s;
+    animation: pulse 1.5s infinite;
+}
+.animated-btn:hover {
+    background: #e65100;
+    transform: scale(1.05);
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 #ff980044; }
+    70% { box-shadow: 0 0 0 10px #ff980000; }
+    100% { box-shadow: 0 0 0 0 #ff980000; }
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #222;
+    color: #fff;
+    margin-top: 2rem;
+}
+footer a {
+    color: #ff9800;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 600px) {
+    main {
+        padding: 1rem;
+    }
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery img {
+        width: 90vw;
+        height: 30vw;
+        max-width: 300px;
+        max-height: 120px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* === Dark/Light Mode === */
+body.dark-mode {
+    background: #181818;
+    color: #f4f4f4;
+}
+body.dark-mode main {
+    background: #232323;
+    color: #f4f4f4;
+}
+body.dark-mode header, body.dark-mode footer {
+    background: #111;
+    color: #ffeb3b;
+}
+body.dark-mode .nav-links a {
+    color: #ffeb3b;
+}
+body.dark-mode .nav-links a:hover {
+    color: #ff9800;
+}
+body.dark-mode th {
+    background: #333;
+    color: #ffeb3b;
+}
+body.dark-mode tr:nth-child(even) {
+    background: #232323;
+}
+body.dark-mode .animated-btn {
+    background: #ffeb3b;
+    color: #222;
+}
+body.dark-mode .animated-btn:hover {
+    background: #ffd600;
+}
+
+/* === Theme Accent Color (dynamic, JS will update --accent-color) === */
+:root {
+    --accent-color: #ff9800;
+}
+.animated-btn, .nav-links a:hover, th, footer a {
+    background: var(--accent-color, #ff9800);
+    color: #fff;
+}
+.animated-btn:hover {
+    background: #e65100;
+}
+
+/* === Hamburger Menu === */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: inherit;
+    cursor: pointer;
+    margin-right: 1rem;
+}
+@media (max-width: 800px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        padding: 1rem 0;
+    }
+    .nav-links.open {
+        display: flex;
+    }
+    .hamburger {
+        display: inline-block;
+    }
+}
+
+/* === Modal (Login) === */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+}
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 300px;
+    position: relative;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.modal-content h2 {
+    margin-top: 0;
+}
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+body.dark-mode .modal-content {
+    background: #232323;
+    color: #f4f4f4;
+}
+
+/* === Contact Form === */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+#contact-form input, #contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+#contact-form textarea {
+    min-height: 80px;
+    resize: vertical;
+}
+#contact-form .error {
+    color: #e53935;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+}
+body.dark-mode #contact-form input, body.dark-mode #contact-form textarea {
+    background: #181818;
+    color: #f4f4f4;
+    border: 1px solid #444;
+}
+
+/* === Error Message for Login === */
+#login-error {
+    color: #e53935;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* === Animated Gallery Images === */
+.animated-img {
+    transition: transform 0.4s, box-shadow 0.4s;
+}
+.animated-img:hover {
+    transform: scale(1.12) rotate(-2deg);
+    box-shadow: 0 4px 16px rgba(255,152,0,0.3);
+}
+
+/* === Export/Sort/Search Controls === */
+#project-search, #sort-select, #export-btn {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+#export-btn {
+    background: var(--accent-color, #ff9800);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#export-btn:hover {
+    background: #e65100;
+}
+
+/* === Responsive Table === */
+@media (max-width: 600px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+    th, td {
+        padding: 0.5rem;
+    }
+    th {
+        background: var(--accent-color, #ff9800);
+        color: #fff;
+    }
+    tr {
+        margin-bottom: 1rem;
+    }
+}
+
+/* === Icon Buttons === */
+.icon-btn {
+    background: none;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: inherit;
+    cursor: pointer;
+    margin: 0 4px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+.icon-btn:hover, .icon-btn:focus {
+    background: var(--accent-color, #ff9800);
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    outline: none;
+}
+.icon-btn i {
+    pointer-events: none;
+}
+/* Hide default color input, show palette icon as trigger */
+#accent-color-picker {
+    display: none;
+}
+.icon-btn[for="accent-color-picker"] {
+    cursor: pointer;
+}
