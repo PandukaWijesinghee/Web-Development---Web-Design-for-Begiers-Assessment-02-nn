@@ -51,3 +51,5 @@ Panduka Wijesinghe
 ## License
 
 This project is for educational purposes only.
+
+![Portfolio Webpage Screenshot](Assessment%2002/WebpageScreenshot.png)
