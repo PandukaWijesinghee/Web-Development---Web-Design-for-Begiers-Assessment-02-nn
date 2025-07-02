@@ -32,7 +32,7 @@ Assessment 02/
    - Download the project files to your local machine.
 
 2. **Open the Application**
-   - Navigate to the `Assessment 02/Assessment 02/` directory.
+   - Navigate to the `Assessment 02/` directory.
    - Open `index.html` in your web browser.
 
 That's it! You should see the web application running.
